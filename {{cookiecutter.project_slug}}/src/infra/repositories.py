@@ -36,7 +36,7 @@ class Postgres{{ cookiecutter.entity_name }}Repo(SqlAlchemyRepo, {{ cookiecutter
 
 
 {% if cookiecutter.add_redis %}
-class Redis{{ cookiecutter.entity_name }}Repo(ESRepo, {{ cookiecutter.entity_name }}Repo):
+class Redis{{ cookiecutter.entity_name }}Repo(RedisRepo, {{ cookiecutter.entity_name }}Repo):
     entity = {{ cookiecutter.entity_name }}
 
     async def get(self, *args, **kwargs) -> list[{{ cookiecutter.entity_name }}] | None:
