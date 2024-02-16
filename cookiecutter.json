@@ -1,0 +1,9 @@
+{
+    "project_name": "FastAPI App with Docker and DDD",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "entity_name": "SomeEntity",
+    "entity_slug": "{{ cookiecutter.entity_name.lower().replace(' ', '_') }}",
+    "add_postgresql": true,
+    "add_elasticsearch": false,
+    "add_redis": false
+}
