@@ -10,12 +10,8 @@ def get_database_session(database_url: str):
     engine = create_async_engine(
         database_url,
         encoding="utf8",
-        future=True,
-        echo=False,
-        pool_recycle=60,
+        echo=settings.DEBUG,
         pool_pre_ping=True,
-        query_cache_size=0,
-        connect_args={"connect_timeout": 60},
     )
 
     async_session = sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)

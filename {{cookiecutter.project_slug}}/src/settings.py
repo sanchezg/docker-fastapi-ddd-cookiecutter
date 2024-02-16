@@ -14,7 +14,7 @@ dotenv_path = BASE_DIR + "/config/.env." + env
 load_dotenv(dotenv_path=dotenv_path)
 
 BASE_URL = os.environ.get("BASE_URL")
-DEBUG = os.environ.get("DEBUG")
+DEBUG = bool(os.environ.get("DEBUG"))
 
 IS_PROD_ENV = env == "prod"
 IS_LOCAL_ENV = env == "local"
